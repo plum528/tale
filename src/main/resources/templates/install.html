@@ -7,14 +7,18 @@
     <link rel="shortcut icon" href="/static/admin/images/favicon.png"/>
     <title>Tale - 博客安装</title>
     <link href="${cdnURL()}/plugins/jquery-steps/1.1.0/jquery.steps.css" rel="stylesheet" >
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/6.4.1/sweetalert2.min.css" rel="stylesheet">
+    <!--
     <link href="${cdnURL()}/plugins/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="${cdnURL()}/plugins/limonte-sweetalert2/6.4.1/sweetalert2.min.css" rel="stylesheet">
+    -->
+
     <link href="${cdnURL()}/plugins/vue-loading/vue-loading.min.css" rel="stylesheet" >
     <link href="${cdnURL()}/css/style.min.css" rel="stylesheet" >
     <style>
         body,html {
-            background: url("/static/admin/images/bg/${random(5, '.png')}") no-repeat;
-            background-size: cover;
+            background-color: deeppink;
         }
         .home-text {
             -webkit-box-sizing: content-box;
@@ -140,14 +144,24 @@
     文件。
     #end
 </div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.5.17/vue.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/6.4.1/sweetalert2.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery-validate/1.15.1/localization/messages_zh.min.js"></script>
+<!--
 <script src="${cdnURL()}/plugins/jquery/3.2.1/jquery.min.js"></script>
 <script src="${cdnURL()}/plugins/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="${cdnURL()}/plugins/vue/vue.min.js"></script>
-<script src="${cdnURL()}/plugins/vue-loading/vue-loading.min.js"></script>
 <script src="${cdnURL()}/plugins/axios/axios.min.js"></script>
 <script src="${cdnURL()}/plugins/limonte-sweetalert2/6.4.1/sweetalert2.min.js"></script>
 <script src="${cdnURL()}/plugins/jquery-validate/1.15.1/jquery.validate.min.js"></script>
 <script src="${cdnURL()}/plugins/jquery-validate/1.15.1/localization/messages_zh.min.js"></script>
+-->
+<script src="${cdnURL()}/plugins/vue-loading/vue-loading.min.js"></script>
 <script src="${cdnURL()}/plugins/jquery-steps/1.1.0/jquery.steps.min.js"></script>
 <script src="${cdnURL()}/js/base.js?v=${version}"></script>
 <script src="${cdnURL()}/js/install.js?v=${version}"></script>
