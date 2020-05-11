@@ -64,6 +64,7 @@ var vm = new Vue({
                 params.selected = null;
                 params.created = moment($('#form_datetime').val(), "YYYY-MM-DD HH:mm").unix();
                 params.tags = $('#tags').val();
+                params.content = encodeURIComponent(params.content);
 
                 var url = $vm.article.cid !== '' ? '/admin/api/article/update' : '/admin/api/article/new';
                 tale.post({

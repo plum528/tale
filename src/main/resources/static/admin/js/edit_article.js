@@ -195,6 +195,7 @@ var vm = new Vue({
                 params.selected = null;
                 params.created = moment($('#form_datetime').val(), "YYYY-MM-DD HH:mm").unix();
                 params.tags = $('#tags').val();
+                params.content = encodeURIComponent(params.content);
 
                 tale.post({
                     url: '/admin/api/article/update',

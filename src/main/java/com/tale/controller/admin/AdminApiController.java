@@ -24,6 +24,7 @@ import com.tale.validators.CommonValidator;
 import io.github.biezhi.anima.Anima;
 import io.github.biezhi.anima.enums.OrderBy;
 import io.github.biezhi.anima.page.Page;
+import jetbrick.util.StringEscapeUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -89,6 +90,8 @@ public class AdminApiController extends BaseController {
     public RestResponse newArticle(@BodyParam Contents contents) {
         CommonValidator.valid(contents);
 
+        contents.setContent(StringEscapeUtils.unescapeUrl(contents.getContent(), "UTF-8"));
+
         Users users = this.user();
         contents.setType(Types.ARTICLE);
         contents.setAuthorId(users.getUid());
@@ -116,6 +119,7 @@ public class AdminApiController extends BaseController {
         if (null == contents || null == contents.getCid()) {
             return RestResponse.fail("缺少参数，请重试");
         }
+        contents.setContent(StringEscapeUtils.unescapeUrl(contents.getContent(), "UTF-8"));
         CommonValidator.valid(contents);
         Integer cid = contents.getCid();
         contentsService.updateArticle(contents);
